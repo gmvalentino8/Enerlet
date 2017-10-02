@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Enerlet="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings"
+        />
+
+    <item
+        android:id="@+id/action_share"
+        android:title="Share an Update"
+        />
+
+    <item
+        android:id="@+id/action_invite"
+        android:title="Invite Friends"
+        />
+
+    <item
+        android:id="@+id/action_learn"
+        android:title="Learn More"
+        />
+
+</menu>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.valentino.enerlet.MylifeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:titleTextColor="#FFFFFF"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_bar"
+        android:layout_above="@+id/bottom_navigation"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/life_text_wrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/textshape"
+                >
+
+                <TextView
+                    android:id="@+id/mylife_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mylife_text"
+                    android:textSize="40dp"
+                    android:textAlignment="center"
+                    />
+
+                <TextView
+                    android:id="@+id/mylife_subtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mylife_text"
+                    android:text="@string/mylife_subtext"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/life_text_wrap"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/diet_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diet_text"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:id="@+id/diet_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/car_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/car_text"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:id="@+id/car_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/milage_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/milage_text"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:id="@+id/milage_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/public_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/public_text"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:id="@+id/public_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/flight_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/flight_text"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:id="@+id/flight_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/mylife_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_below="@id/questions"
+                android:layout_alignRight="@+id/questions"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:layout_marginRight="25dp"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

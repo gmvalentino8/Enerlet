@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">EnerLet</string>
+    <string name="facebook_app_id">261462704190683</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="tab_1">Footprint</string>
+    <string name="tab_2">Trip</string>
+    <string name="tab_3">Action</string>
+    <string name="tab_4">My Life</string>
+    <string name="tab_5">Preferences</string>
+    <string name="trip_text">Help the planet. One trip at a time.</string>
+    <string name="trip_subtext">Use our trip feature to travel greener. Enter in an origin and destination, and see what transport modes have the lowest carbon impact</string>
+    <string name="action_text">For the planet, every action matters.</string>
+    <string name="action_subtext">Browse through our marketplace to offset carbon and purchase green products</string>
+    <string name="mylife_text">We want to know you better.</string>
+    <string name="mylife_subtext">We can help you understand and reduce your carbon footprint by knowing more about your habits</string>
+
+    <string name="diet_text">What is your diet?</string>
+    <string-array name="diet_array">
+        <item>Meat Lover</item>
+        <item>Average American</item>
+        <item>No Beef</item>
+        <item>Vegitarian</item>
+        <item>Vegan</item>
+    </string-array>
+    <string name="car_text">What type of car do you ride (e.g. taxi) or drive in?</string>
+    <string-array name="car_array">
+        <item>N/A (I don\'t use a car)</item>
+        <item>Hybrid</item>
+        <item>Small</item>
+        <item>Mid-sized</item>
+        <item>Large</item>
+    </string-array>
+    <string name="milage_text">What is your yearly mileage?</string>
+    <string-array name="milage_array">
+        <item>Less than 5,000</item>
+        <item>5,000 - 10,000</item>
+        <item>10,000 - 20,000</item>
+        <item>20,000+</item>
+    </string-array>
+    <string name="public_text">How often do you use public transport per week (e.g. bus or train)?</string>
+    <string-array name="public_array">
+        <item>N/A</item>
+        <item>10-50 miles per week</item>
+        <item>50-100 miles per week</item>
+        <item>100-400 miles per week</item>
+        <item>400+ miles per week</item>
+    </string-array>
+    <string name="flight_text">What is your annual flight miles?</string>
+    <string-array name="flight_array">
+        <item>0-15 Hours (0-7,500 miles)</item>
+        <item>15-30 Hours (7,500-15,000 miles)</item>
+        <item>30-45 Hours (15,000-22,500 miles)</item>
+        <item>45-60 Hours (22,500-30,000 miles)</item>
+        <item>60+ Hours (30,000+ miles)</item>
+    </string-array>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_trip">TripActivity</string>
+</resources>

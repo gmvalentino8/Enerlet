@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.valentino.enerlet.DashboardActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:titleTextColor="#FFFFFF"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:id="@+id/rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_bar">
+        <TextView
+            android:id="@+id/my_footprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Carbon Footprint is: "
+            android:textSize="18dp"
+            />
+        <TextView
+            android:id="@+id/avg_footprint"
+            android:layout_below="@+id/my_footprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Average Carbon Footprint is:   "
+            android:textSize="18dp"
+            />
+        <TextView
+            android:id="@+id/my_footprint_value"
+            android:layout_toRightOf="@+id/avg_footprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:id="@+id/avg_footprint_value"
+            android:layout_toRightOf="@+id/avg_footprint"
+            android:layout_below="@+id/my_footprint_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:id="@+id/rating_text"
+            android:layout_below="@+id/avg_footprint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            />
+    </RelativeLayout>
+
+    <lecho.lib.hellocharts.view.ColumnChartView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rating"
+        android:layout_above="@+id/bottom_navigation"
+        />
+
+
+</RelativeLayout>

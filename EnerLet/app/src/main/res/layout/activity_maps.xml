@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.valentino.enerlet.MapsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:titleTextColor="#FFFFFF"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/trip_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_bar"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starting"/>
+
+        <TableLayout
+            android:id="@+id/table_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/route"
+            android:stretchColumns="0,1,2">
+            <TableRow>
+                <TextView
+                    android:layout_column="0"
+                    android:text="Mode"
+                    android:textStyle="bold"
+                    android:padding="3dp"/>
+                <TextView
+                    android:layout_column="1"
+                    android:text="Duration"
+                    android:textStyle="bold"
+                    android:padding="3dp"/>
+                <TextView
+                    android:layout_column="2"
+                    android:text="Carbon (Pounds)"
+                    android:textStyle="bold"
+                    android:padding="3dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_column="0"
+                    android:text="Walking"
+                    android:padding="3dp"/>
+                <TextView
+                    android:id="@+id/walk_duration"
+                    android:layout_column="1"
+                    android:padding="3dp"/>
+                <TextView
+                    android:id="@+id/walk_carbon"
+                    android:layout_column="2"
+                    android:text="0.00"
+                    android:padding="3dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_column="0"
+                    android:text="Bicycling"
+                    android:padding="3dp"/>
+                <TextView
+                    android:id="@+id/bike_duration"
+                    android:layout_column="1"
+                    android:padding="3dp"/>
+                <TextView
+                    android:id="@+id/bike_carbon"
+                    android:layout_column="2"
+                    android:text="0.00"
+                    android:padding="3dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_column="0"
+                    android:text="Transit"
+                    android:padding="3dp"/>
+                <TextView
+                    android:id="@+id/transit_duration"
+                    android:layout_column="1"
+                    android:padding="3dp"/>
+                <TextView
+                    android:id="@+id/transit_carbon"
+                    android:layout_column="2"
+                    android:text="2.53"
+                    android:padding="3dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_column="0"
+                    android:text="Driving"
+                    android:padding="3dp"/>
+                <TextView
+                    android:id="@+id/drive_duration"
+                    android:layout_column="1"
+                    android:padding="3dp"/>
+                <TextView
+                    android:id="@+id/drive_carbon"
+                    android:layout_column="2"
+                    android:text="86.08"
+                    android:padding="3dp"/>
+            </TableRow>
+
+        </TableLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trip_entry"
+        android:layout_alignLeft="@+id/trip_entry"
+        android:textSize="24dp"
+        android:id="@+id/mode_text"
+        android:text="Mode of Travel:"
+        />
+
+    <LinearLayout
+        android:id="@+id/mode_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/mode_text">
+        <ImageButton
+            android:id="@+id/driving"
+            android:src="@drawable/ic_directions_car_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/walking"
+            android:src="@drawable/ic_directions_walk_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/biking"
+            android:src="@drawable/ic_directions_bike_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <ImageButton
+            android:id="@+id/transit"
+            android:src="@drawable/ic_directions_transit_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary" />
+
+    <FrameLayout
+        android:id="@+id/map_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/mode_select"
+        android:layout_above="@+id/bottom_navigation">
+
+        <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_below="@id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="com.example.valentino.enerlet.MapsActivity" />
+    </FrameLayout>
+
+
+
+
+</RelativeLayout>
